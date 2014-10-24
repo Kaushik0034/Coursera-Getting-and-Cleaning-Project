@@ -8,7 +8,7 @@ Here are the data for the project:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-## Data Descriptions 
+## Input Data Descriptions 
 
 A full description is available at the site where the data was obtained: 
 
@@ -17,6 +17,63 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person  performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed- width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and  gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff  frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
+
+## Output Data Descriptions 
+
+The output of the script will give a tidy data set that will have average of the following variables for each activity and each subject. 
+
+ [3] "tbodyaccmeanx"                      "tbodyaccmeany"                     
+ [5] "tbodyaccmeanz"                      "tbodyaccstdx"                      
+ [7] "tbodyaccstdy"                       "tbodyaccstdz"                      
+ [9] "tgravityaccmeanx"                   "tgravityaccmeany"                  
+[11] "tgravityaccmeanz"                   "tgravityaccstdx"                   
+[13] "tgravityaccstdy"                    "tgravityaccstdz"                   
+[15] "tbodyaccjerkmeanx"                  "tbodyaccjerkmeany"                 
+[17] "tbodyaccjerkmeanz"                  "tbodyaccjerkstdx"                  
+[19] "tbodyaccjerkstdy"                   "tbodyaccjerkstdz"                  
+[21] "tbodygyromeanx"                     "tbodygyromeany"                    
+[23] "tbodygyromeanz"                     "tbodygyrostdx"                     
+[25] "tbodygyrostdy"                      "tbodygyrostdz"                     
+[27] "tbodygyrojerkmeanx"                 "tbodygyrojerkmeany"                
+[29] "tbodygyrojerkmeanz"                 "tbodygyrojerkstdx"                 
+[31] "tbodygyrojerkstdy"                  "tbodygyrojerkstdz"                 
+[33] "tbodyaccmagmean"                    "tbodyaccmagstd"                    
+[35] "tgravityaccmagmean"                 "tgravityaccmagstd"                 
+[37] "tbodyaccjerkmagmean"                "tbodyaccjerkmagstd"                
+[39] "tbodygyromagmean"                   "tbodygyromagstd"                   
+[41] "tbodygyrojerkmagmean"               "tbodygyrojerkmagstd"               
+[43] "fbodyaccmeanx"                      "fbodyaccmeany"                     
+[45] "fbodyaccmeanz"                      "fbodyaccstdx"                      
+[47] "fbodyaccstdy"                       "fbodyaccstdz"                      
+[49] "fbodyaccmeanfreqx"                  "fbodyaccmeanfreqy"                 
+[51] "fbodyaccmeanfreqz"                  "fbodyaccjerkmeanx"                 
+[53] "fbodyaccjerkmeany"                  "fbodyaccjerkmeanz"                 
+[55] "fbodyaccjerkstdx"                   "fbodyaccjerkstdy"                  
+[57] "fbodyaccjerkstdz"                   "fbodyaccjerkmeanfreqx"             
+[59] "fbodyaccjerkmeanfreqy"              "fbodyaccjerkmeanfreqz"             
+[61] "fbodygyromeanx"                     "fbodygyromeany"                    
+[63] "fbodygyromeanz"                     "fbodygyrostdx"                     
+[65] "fbodygyrostdy"                      "fbodygyrostdz"                     
+[67] "fbodygyromeanfreqx"                 "fbodygyromeanfreqy"                
+[69] "fbodygyromeanfreqz"                 "fbodyaccmagmean"                   
+[71] "fbodyaccmagstd"                     "fbodyaccmagmeanfreq"               
+[73] "fbodybodyaccjerkmagmean"            "fbodybodyaccjerkmagstd"            
+[75] "fbodybodyaccjerkmagmeanfreq"        "fbodybodygyromagmean"              
+[77] "fbodybodygyromagstd"                "fbodybodygyromagmeanfreq"          
+[79] "fbodybodygyrojerkmagmean"           "fbodybodygyrojerkmagstd"           
+[81] "fbodybodygyrojerkmagmeanfreq"       "angletbodyaccmean,gravity"         
+[83] "angletbodyaccjerkmean,gravitymean"  "angletbodygyromean,gravitymean"    
+[85] "angletbodygyrojerkmean,gravitymean" "anglex,gravitymean"                
+[87] "angley,gravitymean"                 "anglez,gravitymean"  
+
+The output will be written in a .txt file. 
+The layout of the .txt file will be as below - 
+
+* Activity
+* Subject 
+* Mean of tbodyaccmeanx
+* Mean of tbodyaccmeany
+.... and continue for mean of all the other remaining 86 variables. 
 
 ## Analysis script steps 
 
